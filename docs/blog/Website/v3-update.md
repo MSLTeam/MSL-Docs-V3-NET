@@ -6,7 +6,7 @@ tags:
   - 网站服务
 ---
 
-# 全新文档站点现已上线！
+## 全新文档站点现已上线！
 
 采用 [vuepress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) 构建生成。
 
@@ -20,7 +20,7 @@ tags:
 
 ![](./assets/image-20251014002413469.png)
 
-# 旧版站点已归档~
+## 旧版站点已归档~
 
 V2版本站点经历1年半的历程，正式下线啦~
 
