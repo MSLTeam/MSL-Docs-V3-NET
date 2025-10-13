@@ -1,8 +1,11 @@
 ---
 icon: circle-info
+sticky: true
 permalink: /eula/
 title: Minecraft Server Launcher 用户使用协议
 createTime: 2024/7/14 10:27:00
+tags:
+  - 软件协议
 ---
 2024/7/14 更新
 

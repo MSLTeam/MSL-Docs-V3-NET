@@ -3,7 +3,7 @@ title: Markdown 用法大全
 tags:
   - 其它
 createTime: 2022/10/27 11:02:00
-permalink: /blog/markdown/
+permalink: /article/markdown/
 ---
 
 ## 标题H2
