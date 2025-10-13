@@ -1,6 +1,9 @@
 import { defineClientConfig } from 'vuepress/client'
 import './styles/index.css'
 import Changelog from './components/Changelog.vue'
+import AsideNav from './components/AsideNav.vue'
+import { h } from 'vue'
+import { Layout } from 'vuepress-theme-plume/client'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
@@ -21,5 +24,10 @@ export default defineClientConfig({
 
     // your custom components
     // app.component('CustomComponent', CustomComponent)
+  },
+  layouts: {
+    Layout: h(Layout, null, {
+      'aside-outline-after': () => h(AsideNav),
+    }),
   },
 })
