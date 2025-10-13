@@ -16,6 +16,11 @@ list:
     avatar: https://mslx.mslmc.cn/logo.png
     desc: MSLX延续MSL的设计风格，基于.NET开发，跨平台支持！开服，运行Frp轻轻松松~
   -
+    name: MSL文档 V2
+    link: https://v2.mslmc.cn
+    avatar: https://v2.mslmc.cn/logo.png
+    desc: 上一代MSL文档站点，基于Vuepress & Vuepress-Theme-Hope。
+  -
     name: MSL纪念站
     link: https://msdoc.nstarmc.cn/
     avatar: https://msdoc.nstarmc.cn/logo.png
