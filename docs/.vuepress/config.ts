@@ -126,7 +126,7 @@ export default defineUserConfig({
     //   audioReader: true,  // 启用嵌入音频朗读功能 语法 @[audioReader](url)
       icon: { 
         provider: 'fontawesome',
-        assets: ['fontawesome','fontawesome-with-brands']
+        assets: ['https://jsdmirrors.aino.cyou/npm/@fortawesome/fontawesome-free@7.1.0/js/all.min.js']
       },        // 启用内置图标语法  ::icon-name::
     //   table: true,        // 启用表格增强容器语法 ::: table
     //   codepen: true,      // 启用嵌入 codepen 语法 @[codepen](user/slash)
