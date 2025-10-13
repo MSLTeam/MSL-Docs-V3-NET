@@ -43,14 +43,24 @@ export default defineUserConfig({
       mode: 'block',
       info: [
         {
-          username: '小宇',
-          name: 'luluxiaoyu',
+          username: 'luluxiaoyu',
+          name: '小宇',
           avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg'
         },
         {
           username: 'Waheal',
           name: 'Waheal',
           avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2035582067&spec=640&img_type=jpg'
+        },
+        {
+          username: 'GuHanDuRen',
+          name: 'GuHanDuRen',
+          avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2778318425&spec=640&img_type=jpg'
+        },
+        {
+          username: 'Yuyi-Oak',
+          name: '一只万叶',
+          avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1722157266&spec=640&img_type=jpg'
         }
       ]
     },
