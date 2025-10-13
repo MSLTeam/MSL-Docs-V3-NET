@@ -2,7 +2,7 @@
 icon: palette
 title: MSL Skin (MSL皮肤站)
 createTime: 2025/10/12 21:39:20
-permalink: /docs/msl/msl-skin
+permalink: /docs/msl/msl-skin/
 ---
 
 ::: important ⚠️ 这并不能代替正版

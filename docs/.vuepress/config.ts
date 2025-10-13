@@ -83,7 +83,12 @@ export default defineUserConfig({
     // },
 
     /* 本地搜索, 默认启用 */
-    search: { provider: 'local' },
+    search: { 
+      provider: 'algolia',
+      appId: 'HMWFR6R913',
+      apiKey: "76ae1566669584cc69d559000195a5fc",
+      indexName:"MSL Docs",
+    },
 
     /**
      * Algolia DocSearch
