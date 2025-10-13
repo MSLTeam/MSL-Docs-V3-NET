@@ -39,7 +39,21 @@ export default defineUserConfig({
     /* 页内信息 */
     editLink: true,
     lastUpdated: true,
-    contributors: true,
+    contributors: {
+      mode: 'block',
+      info: [
+        {
+          username: '小宇',
+          name: 'luluxiaoyu',
+          avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg'
+        },
+        {
+          username: 'Waheal',
+          name: 'Waheal',
+          avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2035582067&spec=640&img_type=jpg'
+        }
+      ]
+    },
     changelog: false,
 
     /**
