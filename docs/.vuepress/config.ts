@@ -44,7 +44,7 @@ export default defineUserConfig({
       info: [
         {
           username: 'luluxiaoyu',
-          name: '小宇',
+          name: 'xiaoyu',
           avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg'
         },
         {
