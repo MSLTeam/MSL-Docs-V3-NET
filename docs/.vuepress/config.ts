@@ -64,7 +64,7 @@ export default defineUserConfig({
         }
       ]
     },
-    changelog: false,
+    changelog: true,
 
     /**
      * 编译缓存，加快编译速度
