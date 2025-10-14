@@ -4,25 +4,24 @@ title: MSL服务端镜像源
 createTime: 2025/10/12 21:39:20
 permalink: /docs/msl/msl-mirrors/
 ---
-```component VPBanner
-title: 使用方法
-content: MSL服务端镜像源支持MSL内使用，在线使用（MSL用户中心内），以及API调用
-logo: https://bbs-static.miyoushe.com/static/2025/02/26/ef8c86003ce5397d98ecce574ffeed9e_5817017236091018001.png
-actions:
-  - text: 在线下载
-    link: https://dl.mslmc.cn
-    
-  - text: 在线下载(用户中心版)
-    link: https://user.mslmc.net/download/serverCore
-    
-  - text: API文档 (Apifox)
-    link: https://apidoc-v3.mslmc.cn/api-191469704
-    type: default
-```
+<CardGrid>
+<LinkCard title="在线下载" href="https://dl.mslmc.cn" icon="cloud" description="前往MSL服务端镜像独立站下载资源。" />
+<LinkCard title="在线下载(用户中心)" href="https://user.mslmc.net/download/serverCore" icon="cloud" description="前往MSL用户中心的服务端镜像下载页面下载资源。" />
+<LinkCard title="API文档" href="https://apidoc-v3.mslmc.cn/api-191469704" icon="book" description="基于Apifox的MSL-API-V3的服务端镜像下载API。" />
+
+<Card title="QWQ?" icon="heart"> 
+
+![](./assets/ef8c86003ce5397d98ecce574ffeed9e_5817017236091018001.png)
+
+ </Card>
+
+</CardGrid>
+
+
 
 ## 简介
 
-MSL服务端镜像源为`MSLTeam`自主研发的服务端镜像源同步系统，支持诸多常用的MC服务端，且会定期从各服务端官方API拉取更新。  
+MSL服务端镜像源为 ==MSLTeam== 自主研发的服务端镜像源同步系统，支持诸多常用的MC服务端，且会定期从各服务端官方API拉取更新。  
 
 目前大部分服务端均在MSL服务器做了镜像，下载速度非常快~
 
@@ -45,9 +44,9 @@ MSL-API-V3 通用返回格式:
 }
 ```
 
-单IP QPS限制：中国大陆  `20 QPS` | 海外 `100 QPS`
+单IP QPS限制：中国大陆  ==20 QPS== | 海外 ==100 QPS==
 
-请求API时请带上含有相应APP名字的`User-Agent`
+请求API时请带上含有相应APP名字的 ==User-Agent==
 
 :::
 
@@ -145,4 +144,4 @@ MSL-API-V3 通用返回格式:
 
 我们还支持获取各服务端的简介，服务端分类，部分服务端支持下载不同的构建版本的api接口，这些请参考Apifox文档啦~
 
-[MSL-API-V3 文档](https://apidoc-v3.mslmc.cn/api-191469704)
+<LinkCard title="API文档" href="https://apidoc-v3.mslmc.cn/api-191469704" icon="book" description="基于Apifox的MSL-API-V3的服务端镜像下载API。" />
