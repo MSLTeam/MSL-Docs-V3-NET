@@ -99,7 +99,7 @@ permalink: /docs/mc-server/start/
 
      如果您正在使用带有公网IP的云服务器/您的电脑有公网IP，可以在放行防火墙后使用您的公网IP连接游戏。
 
-     <LinkCard title="配置内网穿透" icon="download" href="/docs/proxy/frp/" description="如果您没有公网IP，那么点这查看如何配置内网穿透吧！<br>让其他人也能访问您的服务器！" />
+     <LinkCard title="配置内网穿透" icon="book" href="/docs/proxy/frp/" description="如果您没有公网IP，那么点这查看如何配置内网穿透吧！<br>让其他人也能访问您的服务器！" />
 
 ::::
 
