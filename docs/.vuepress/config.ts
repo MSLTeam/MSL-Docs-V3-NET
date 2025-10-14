@@ -64,7 +64,7 @@ export default defineUserConfig({
         }
       ]
     },
-    changelog: false,
+    changelog: true,
 
     /**
      * 编译缓存，加快编译速度
@@ -120,11 +120,12 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/markdown/
      */
     markdown: {
+      mark: 'lazy',
     //   abbr: true,         // 启用 abbr 语法  *[label]: content
     //   annotation: true,   // 启用 annotation 语法  [+label]: content
     //   pdf: true,          // 启用 PDF 嵌入 @[pdf](/xxx.pdf)
     //   caniuse: true,      // 启用 caniuse 语法  @[caniuse](feature_name)
-    //   plot: true,         // 启用隐秘文本语法 !!xxxx!!
+      plot: true,         // 启用隐秘文本语法 !!xxxx!!
       bilibili: true,     // 启用嵌入 bilibili视频 语法 @[bilibili](bid)
     //   youtube: true,      // 启用嵌入 youtube视频 语法 @[youtube](video_id)
     //   artPlayer: true,    // 启用嵌入 artPlayer 本地视频 语法 @[artPlayer](url)
