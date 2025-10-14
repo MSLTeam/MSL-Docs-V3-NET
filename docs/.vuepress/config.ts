@@ -32,7 +32,7 @@ export default defineUserConfig({
     hostname: 'https://www.mslmc.cn',
 
     /* 文档仓库配置，用于 editLink */
-    docsRepo: 'MSLTeam/MSL-Docs-Refact',
+    docsRepo: 'MSLTeam/MSL-Docs-V3',
     docsDir: 'docs',
     docsBranch: 'master',
 
