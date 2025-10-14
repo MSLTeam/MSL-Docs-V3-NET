@@ -1,0 +1,3 @@
+Sitemap: https://www.mslmc.cn/sitemap.xml
+User-agent:*
+Disallow:
