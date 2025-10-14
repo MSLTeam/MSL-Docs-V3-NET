@@ -13,6 +13,7 @@
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import navbar from './navbar'
 import collections from './collections'
+import footer from './footer'
 
 /**
  * @see https://theme-plume.vuejs.press/config/basic/
@@ -33,17 +34,14 @@ export default defineThemeConfig({
    * 文章版权信息
    * @see https://theme-plume.vuejs.press/guide/features/copyright/
    */
-  // copyright: true,
+  copyright: 'CC-BY-4.0',
 
   // prevPage: true,   // 是否启用上一页链接
   // nextPage: true,   // 是否启用下一页链接
   // createTime: true, // 是否显示文章创建时间
 
   /* 站点页脚 */
-  footer: {
-    message: 'Power by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a>',
-    copyright: 'Copyright © <a href="https://github.com/MSLTeam/">MSLDev</a> 2021-2025 & <a href="https://beian.miit.gov.cn/">粤ICP备2023094648号-2</a>',
-  },
+  footer,
 
   /**
    * @see https://theme-plume.vuejs.press/config/basic/#profile
