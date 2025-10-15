@@ -46,7 +46,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
 若有出入，请联系反馈~
 :::
 
-:::: steps
+::::: steps
 
 1. ### 请求获取授权码（跳转MSL用户中心授权）
 
@@ -122,7 +122,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
    https://user.mslmc.net/api/oauth/exchangeAccessToken
    ```
 
-   <Card>
+   :::: field-group
 
    ::: field name="code" type="String" required  default="y94vzbhskzcizEDmJMbWt775tbI"
    回调拿到的授权码
@@ -140,7 +140,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
 
    :::
 
-   </Card>
+   ::::
 
    返回示例:
 
@@ -203,7 +203,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
 
    [完整API文档：**获取用户信息 - MSL-User-System**](https://apidoc-user.mslmc.cn/297251390e0){.readmore}
 
-::::
+:::::
 
 ## 3.快速接入MSL登录
 
