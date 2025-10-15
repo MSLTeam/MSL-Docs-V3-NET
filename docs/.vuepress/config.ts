@@ -120,6 +120,7 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/markdown/
      */
     markdown: {
+      field: true,
       mark: 'lazy',
     //   abbr: true,         // 启用 abbr 语法  *[label]: content
     //   annotation: true,   // 启用 annotation 语法  [+label]: content

@@ -1,6 +1,6 @@
 ---
 icon: cloud
-title: MSL服务端镜像源
+title: MSL 服务端镜像源
 createTime: 2025/10/12 21:39:20
 permalink: /docs/msl/msl-mirrors/
 ---
@@ -21,9 +21,9 @@ permalink: /docs/msl/msl-mirrors/
 
 ## 简介
 
-MSL服务端镜像源为 ==MSLTeam== 自主研发的服务端镜像源同步系统，支持诸多常用的MC服务端，且会定期从各服务端官方API拉取更新。  
+MSL服务端镜像源为 ==MSLTeam== 自主研发的MC服务端镜像源同步系统，支持诸多常用的MC服务端，且会定期从各服务端官方API拉取更新。  
 
-目前大部分服务端均在MSL服务器做了镜像，下载速度非常快~
+目前大部分服务端均在MSL服务器做了镜像，下载速度 ==非常快==~
 
 部分服务端来自第三方源（如Forge端返回的是来自BMCL的下载地址）。
 
@@ -44,7 +44,7 @@ MSL-API-V3 通用返回格式:
 }
 ```
 
-单IP QPS限制：中国大陆  ==20 QPS== | 海外 ==100 QPS==
+单IP QPS限制：中国大陆地区  ==20 QPS== | 海外(含港澳台) ==100 QPS==
 
 请求API时请带上含有相应APP名字的 ==User-Agent==
 
@@ -52,7 +52,7 @@ MSL-API-V3 通用返回格式:
 
 ### 1.查询镜像源支持的服务端
 
-`GET`
+<Badge type="tip" text="方法: GET"  />
 
 ```
 /query/available_server_types
@@ -75,7 +75,14 @@ MSL-API-V3 通用返回格式:
 
 ### 2.查询服务端支持的MC版本
 
-`GET` `{server}`为服务端名字（从上一步获取到的）
+<Badge type="tip" text="方法: GET"  />
+:::: field-group
+
+::: field name="server" type="String" required 
+服务端名字（从上一步获取到的）
+:::
+
+::::
 
 ```
 /query/available_versions/{server}
@@ -99,11 +106,24 @@ MSL-API-V3 通用返回格式:
 ### 3.查询特定MC版本的服务端下载地址
 ::: important 防滥用限制
 本接口具有特殊的请求限制  
-1小时: `20次`
-1天: `50次`
+1小时:  ==30次=={.important}  1天:  ==60次=={.important} 
 :::
 
-`GET` `{server}`为服务端名字 `{version}`为MC版本号
+<Badge type="tip" text="方法: GET"  />
+
+:::: field-group
+
+::: field name="server" type="String" required 
+服务端名字
+:::
+
+::: field name="version" type="String" required 
+MC版本号
+:::
+
+::::
+
+
 
 ```
 /download/server/{server}/{version}
@@ -124,7 +144,7 @@ MSL-API-V3 通用返回格式:
 
 ::: warning 注意
 
-并非所有服务端下载都会返回`sha256`这个key！
+并非所有服务端下载都会返回 ==sha256=={.warning} 这个key！
 
 也有可能是这样的:
 
