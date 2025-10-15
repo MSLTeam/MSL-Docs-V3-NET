@@ -5,24 +5,26 @@ createTime: 2025/10/12 21:39:20
 permalink: /docs/msl/oauth2/
 ---
 ::: tip TIPS
-此处介绍的开发者将自己的服务接入MSL统一身份验证（即MSL用户中心服务）第三方登录  
+此处介绍的开发者将自己的服务 ==接入MSL统一身份验证==（即MSL用户中心服务） ==第三方登录== 。  
 若您并不知道什么意思，那就别看啦~
 
 :::
 
 ## 1.申请OAuth App
 
-进入MSL用户中心-[OAuth App管理页面](https://user.mslmc.net/user/oauth) 点击添加应用
+进入MSL用户中心的OAuth App管理页面，点击添加应用。
+
+[MSL OAuth App管理](https://user.mslmc.net/user/oauth){.readmore}
 
 ![image-20250518191948522](./assets/image-20250518191948522.png)
 
-填写应用的名字，图标（推荐正方形，需要是可以外部访问的url地址），以及您的App的回调地址。
+填写应用的 ==名字==，==图标==（推荐正方形，需要是可以外部访问的url地址），以及您的App的 ==回调地址== 。
 
 ![image-20250518192149472](./assets/image-20250518192149472.png)
 
-点击确定后，会返回您的App客户端ID以及密钥信息。
+点击确定后，会返回您的App ==客户端ID== 以及 ==密钥== 信息。
 ::: important 注意
-请妥善保管您的密钥，密钥仅会显示一次。
+请妥善保管您的密钥，==密钥仅会显示一次=={.important} 。
 后续若忘记密钥就只能重置了。
 :::
 
@@ -31,143 +33,185 @@ permalink: /docs/msl/oauth2/
 ![image-20250518193907252](./assets/image-20250518193907252.png)
 
 ::: info 审核
-添加App后会进入待审核状态，请联系管理员审核。
+添加App后会进入待审核状态，请 ==联系管理员审核== 。
 否则App无法正常调用哦！
 :::
 
 ## 2.OAuth流程
 ::: tip OAuth 2.0
-[OAuth2](https://oauth.net/2/)  
+
+[什么是 OAuth2 ?](https://oauth.net/2/){.readmore} 
+
 MSL统一身份验证基于OAuth2的授权码模式规范设计  
 若有出入，请联系反馈~
 :::
 
-### ①请求获取授权码（跳转MSL用户中心授权）
+:::: steps
 
-请求授权地址：
+1. ### 请求获取授权码（跳转MSL用户中心授权）
 
-```
-https://user.mslmc.net/oauth/authorize
-```
-查询参数:
+   请求跳转授权地址：
 
-| 参数         |              示例值               |       必需        |                             说明                             |
-| ------------ | :-------------------------------: | :---------------: | :----------------------------------------------------------: |
-| client_id    |    NeQ5v7T72vm4Yi6ADyYAW6m4eVK    |       必需        |                 客户端ID（第一步申请得到的）                 |
-| state        |           SiGEWINNEQWQ            | 非必需 但强烈建议 | 随机字符串，防止CSRF，请求方应当生成并记录此字符串，用于后续验证 |
-| redirect_uri | https://api.mslmc.cn/api/callback | 非必需 但强烈建议 | 登录成功后重新向的地址（一般是编码的地址），若不传此参数则读取App设置的URI地址 |
+   ```
+   https://user.mslmc.net/oauth/authorize
+   ```
 
-示例拼接地址:
+   查询参数:
 
-```
-https://user.mslmc.net/oauth/authorize?client_id=NeQ5v7T72vm4Yi6ADyYAW6m4eVK&state=SiGEWINNEQWQ&redirect_uri=https%3a%2f%2fapi.mslmc.cn%2fapi%2fcallback
-```
-::: warning 最小示例拼接地址
-```
-https://user.mslmc.net/oauth/authorize?client_id=NeQ5v7T72vm4Yi6ADyYAW6m4eVK
-```
-但是**不建议**这么做，缺少`state`参数可能会导致一些风险哦~
-:::
+   <Card>
 
-若地址正确，访问后应该是如下页面:
+   ::: field name="client_id" type="String" required  default="NeQ5v7T72vm4Yi6ADyYAW6m4eVK"
+   客户端ID（第一步申请得到的）。
+   :::
 
-![image-20250518194152354](./assets/image-20250518194152354.png)
+   ::: field name="state" type="String" optional default="SiGEWINNEQWQ"
+   随机字符串，防止CSRF，请求方应当生成并记录此字符串，用于后续验证。
 
-### ②使用授权码交换AccessToken
+   <Badge type="warning" text="非必须，但强烈建议。"  />
 
-登录成功后，MSL用户中心将根据填写的App回调地址重定向并添加`code`和`state`参数（方法是GET）
-::: tip
-`code`有效期只有10分钟。
-:::
+   :::
 
-MSL用户中心授权成功的重定向示例:
+   ::: field name="redirect_uri" type="String" optional default="https://api.mslmc.cn/api/callback"
+   登录成功后重新向的地址（一般是编码的地址），若不传此参数则读取App设置的URI地址。
 
-```
-https://api.mslmc.cn/api/callback?code=y94vzbhskzcizEDmJMbWt775tbI&state=iGEWINNEQWQ
-```
+   <Badge type="warning" text="非必须，但强烈建议。"  />
 
-您的客户端接收到回调后应该核对`state`是否与请求时的一致，若不一致，请拒绝登录请求。
+   :::
 
-然后需要用拿到的code通过api交换得到AccessToken
+   </Card>
 
-POST `application/x-www-form-urlencoded` 或者 `application/json`
+   示例拼接地址:
 
-```
-https://user.mslmc.net/api/oauth/exchangeAccessToken
-```
+   ```
+   https://user.mslmc.net/oauth/authorize?client_id=NeQ5v7T72vm4Yi6ADyYAW6m4eVK&state=SiGEWINNEQWQ&redirect_uri=https%3a%2f%2fapi.mslmc.cn%2fapi%2fcallback
+   ```
 
-| 参数          | 示例值                      | 说明                       |
-| ------------- | --------------------------- | -------------------------- |
-| code          | y94vzbhskzcizEDmJMbWt775tbI | 回调拿到的授权码           |
-| client_id     | NeQ5v7T72vm4Yi6ADyYAW6m4eVK | 您在第一步申请的客户端ID   |
-| client_secret | FAOFoGDPtTK8Yudlerv...      | 您在第一步申请的客户端密钥 |
+   ::: warning 最小示例拼接地址
 
-返回示例:
+   ```
+   https://user.mslmc.net/oauth/authorize?client_id=NeQ5v7T72vm4Yi6ADyYAW6m4eVK
+   ```
 
-```json
-{
-  "code": 200,
-  "msg": "授权成功",
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg",
-  "expires_in": 3600,
-  "token_type": "Bearer",
-  "scope": "user_info"
-}
-```
+   但是**不建议**这么做，缺少 ==state=={.warning} 参数可能会导致一些风险（如：==跨站攻击=={.warning}）哦~
+   :::
 
-获取到`access_token`即可
+   若地址正确，访问后应该是如下页面:
 
-此api文档: [获取Access Token - MSL-User-System](https://apidoc-user.mslmc.cn/297247077e0)
+   ![image-20250518194152354](./assets/image-20250518194152354.png)
 
-### ③获取用户信息
+2. ### 使用授权码交换AccessToken
 
-GET
+   登录成功后，MSL用户中心将根据填写的App回调地址重定向并添加 ==code== 和 ==state== 参数（方法是GET）
+   ::: tip
+   ==code== 有效期只有 ==10分钟== 。
+   :::
 
-```
-https://user.mslmc.net/api/oauth/user
-```
+   MSL用户中心授权成功的重定向示例:
 
-需要添加`Authorization`请求头
+   ```
+   https://api.mslmc.cn/api/callback?code=y94vzbhskzcizEDmJMbWt775tbI&state=iGEWINNEQWQ
+   ```
 
-在 Header 添加参数 Authorization，其值为在 Bearer 之后拼接 Token
-示例: 
+   您的客户端接收到回调后应该核对 ==state== 否与请求时的一致，若不一致，请 ==拒绝登录请求== 。
 
-```
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg
-```
+   然后需要用拿到的code通过api交换得到AccessToken
 
-返回示例:
+   <Badge type="warning" text="POST application/x-www-form-urlencoded 或者 application/json"  />
 
-```json
-{
-  "code": 200,
-  "msg": "获取用户信息成功",
-  "uid": 1,
-  "username": "小可爱",
-  "email": "user@mslmc.cn",
-  "qq": null,
-  "score": 1500,
-  "avatar": "https://cravatar.cn/avatar/d31946d60f6051840edc9d41a1261?d=identicon&s=640",
-  "regTime": 1737992780,
-  "lastLoginTime": 1745988703,
-  "permission": 1,
-  "realName": false,
-  "lastCheckInTime": null,
-  "twoFactorAuth": true
-}
-```
+   ```
+   https://user.mslmc.net/api/oauth/exchangeAccessToken
+   ```
 
-请使用`uid`字段作为判断用户绑定的参数，这是每位用户唯一的ID，且不会变化。
+   <Card>
 
-其他的信息按需使用/更新即可。
+   ::: field name="code" type="String" required  default="y94vzbhskzcizEDmJMbWt775tbI"
+   回调拿到的授权码
+   :::
 
-此api文档: [获取用户信息 - MSL-User-System](https://apidoc-user.mslmc.cn/297251390e0)
+   ::: field name="client_id" type="String" required default="NeQ5v7T72vm4Yi6ADyYAW6m4eVK"
+   您在第一步申请的客户端ID
+
+   :::
+
+   ::: field name="client_secret" type="String" required default="FAOFoGDPtTK8Yudlerv..."
+   您在第一步申请的客户端密钥
+
+   <Badge type="warning" text="非必须，但强烈建议。"  />
+
+   :::
+
+   </Card>
+
+   返回示例:
+
+   ```json
+   {
+     "code": 200,
+     "msg": "授权成功",
+     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg",
+     "expires_in": 3600,
+     "token_type": "Bearer",
+     "scope": "user_info"
+   }
+   ```
+
+   获取到 ==access_token== 即可
+
+   [完整API文档：**获取Access Token - MSL-User-System**](https://apidoc-user.mslmc.cn/297247077e0){.readmore}
+
+3. ### 获取用户信息
+
+   <Badge type="tip" text="GET"  />
+
+   ```
+   https://user.mslmc.net/api/oauth/user
+   ```
+
+   需要添加 ==Authorization== 请求头
+
+   在 Header 添加参数 Authorization，其值为在 Bearer 之后拼接 Token
+   示例: 
+
+   ```
+   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg
+   ```
+
+   返回示例:
+
+   ```json
+   {
+     "code": 200,
+     "msg": "获取用户信息成功",
+     "uid": 1,
+     "username": "小可爱",
+     "email": "user@mslmc.cn",
+     "qq": null,
+     "score": 1500,
+     "avatar": "https://cravatar.cn/avatar/d31946d60f6051840edc9d41a1261?d=identicon&s=640",
+     "regTime": 1737992780,
+     "lastLoginTime": 1745988703,
+     "permission": 1,
+     "realName": false,
+     "lastCheckInTime": null,
+     "twoFactorAuth": true
+   }
+   ```
+
+   请使用 ==uid== 字段作为判断用户绑定的参数，这是每位用户唯一的ID，且不会变化。
+
+   其他的信息按需使用/更新即可。
+
+   [完整API文档：**获取用户信息 - MSL-User-System**](https://apidoc-user.mslmc.cn/297251390e0){.readmore}
+
+::::
 
 ## 3.快速接入MSL登录
 
 ### # 接入到WordPress
 
-使用此插件: [Releases · luluxiaoyu/MSL-OAuth2-WordPress](https://github.com/luluxiaoyu/MSL-OAuth2-WordPress/releases)
+使用此插件: 
+
+<RepoCard repo="luluxiaoyu/MSL-OAuth2-WordPress" />
 
 下载zip，并在您的wordpress上安装并启用插件。
 
