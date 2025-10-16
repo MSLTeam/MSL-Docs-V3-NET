@@ -26,7 +26,7 @@ list:
     avatar: https://msdoc.nstarmc.cn/logo.png
     desc: 很久以前的MSL网站~
   -
-    name: XMCL团队
+    name: XMCL
     link: https:// www.mcxmcl.cn
     avatar: https://q.qlogo.cn/headimg_dl?dst_uin=3242247564&spec=640&img_type=jpg
     desc: 用公益照亮每个我的世界服务器。
