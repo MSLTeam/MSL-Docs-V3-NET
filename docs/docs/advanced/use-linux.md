@@ -4,41 +4,39 @@ title: 在Linux中开服
 createTime: 2025/10/12 21:37:27
 permalink: /docs/advanced/use-linux/
 ---
-```component VPBanner
-title: MSLX
-content: 支持跨平台的MSL正在火热开发🔥~
-logo: https://mslx.mslmc.cn/logo.png
-actions:
-  - text: 下载尝鲜
-    link: https://files.mslmc.cn/MSLX-Dev/Dev
-    
-  - text: MSLX文档
-    link: https://mslx.mslmc.cn/
-    type: default
-```
+
+<CardGrid>
+
+<LinkCard title="MSLX 尝鲜" icon="download" href="https://files.mslmc.cn/MSLX-Dev/Dev" description="支持跨平台的MSL正在火热开发🔥~" />
+
+<LinkCard title="MSLX 文档" icon="book" href="https://mslx.mslmc.cn/" description="MSLX延续MSL的设计风格，基于.NET开发，跨平台支持！开服，运行Frp轻轻松松~" />
+
+</CardGrid>
 
 ::: important
 由于MSL暂时不支持Linux，所以本教程适合有一些基础的用户使用  
-MSLX在路上了~
+==MSLX=={.important}在路上了~
 :::
 
 很多小伙伴都在云服务商购买了`云服务器`用来开服，但是有的时候只能安装Linux系统，这时候无法使用MSL，我们应该怎么开服呢？  
 
-~~(重装成Windows Server即可！)~~
+!!(重装成Windows Server即可！)!!
 
 **别着急！这篇教程会帮到你！**
 
-教程所使用的服务器系统：Ubuntu 22.04.1 LTS x64 amd64
+教程所使用的服务器系统：`Ubuntu 22.04.1 LTS x64 amd64`
+
+本文由 ==一只万叶== !!猫娘¿!! 提供。
 
 ------
 
-#### 1. 准备开始
+## 1. 准备开始
 
 一般来说我们可以使用SSH进行远程连接，具体操作可以看[这里](https://blog.csdn.net/li528405176/article/details/82810342)
 
 
 
-#### 2. 信息确认
+## 2. 信息确认
 
 确认操作系统发行版信息（因为本篇教程只在基于Debian的发行版下可行）：`cat /etc/issue`
 
@@ -46,13 +44,15 @@ MSLX在路上了~
 
 
 
-#### 3. 安装Java
+## 3. 安装Java
 
 安装Java有很多种方法，而且OpenJDK也有许多不同的发行版本，这里只提到**Oracle Java**和**Zulu JDK**，并且都使用**dpkg**安装。在以下教学中如果你复制的链接是下载**.deb**后缀，但是实际文件并不是，请使用`cp [原文件名] [更改后文件名]`进行更正，具体只需要将正确后缀后以"?"开头的部分删除。
 
-1）Oracle JDK
+### 1）Oracle JDK
 
-[Oracle JDK下载界面](https://www.oracle.com/cn/java/technologies/) | [Java8下载界面](https://www.java.com/zh-CN/download/manual.jsp) 
+[Oracle JDK下载界面](https://www.oracle.com/cn/java/technologies/){.readmore}
+
+[Java8下载界面](https://www.java.com/zh-CN/download/manual.jsp){.readmore} 
 
 将对应版本的下载链接复制（注意应是**.deb**后缀），然后进入到SSH界面，使用命令 `wget [下载链接]`或 `curl -O [下载链接]` 将对应的软件包下载，使用命令 `sudo dpkg -i [文件名]` 进行安装，如果不知道文件名具体是什么，可以使用 `ls`  命令查看。
 
@@ -62,15 +62,15 @@ MSLX在路上了~
 
 ------
 
-2）Zulu JDK
+### 2）Zulu JDK
 
-[Zulu JDK下载](https://www.azul.com/downloads/?package=jdk#zulu)
+[Zulu JDK下载](https://www.azul.com/downloads/?package=jdk#zulu){.readmore}
 
 下拉，在**Java Version**选择你所需要的版本，在**Operating System**选择你的系统，在**Architecture**选择**x86 64bit**，在**Java Package**选择**JDK**，点击**Download**并选择**.deb**选项，复制下载链接并进入SSH界面，使用命令`wget [下载链接]` 将对应的软件包下载，使用命令`sudo apt install java-common -y`安装依赖，使用命令`sudo dpkg -i [文件名]`进行安装，如果不知道文件名具体是什么，可以使用 `ls`  命令查看。
 
 *如果你购买的云服务器内存不太大，你可以使用`sudo rm [文件名]`删除下载的文件。*
 
-#### 4. 开服前的一些准备
+## 4. 开服前的一些准备
 
 新建一个文件夹并进入：`mkdir myserver && cd myserver`
 
@@ -86,11 +86,13 @@ MSLX在路上了~
 
 ![](./assets/winscp_3.png)
 
-**仔细阅读[EULA | Minecraft Minecraft 最终用户许可协议 (“EULA”)](https://www.minecraft.net/zh-hans/eula)。如果你继续下面的步骤，即视为你已同意Minecraft 最终用户许可协议 (“EULA”)且不违反相关条例！**
+**仔细阅读 ==Minecraft Minecraft 最终用户许可协议 (“EULA”)== 。如果你继续下面的步骤，即视为你已同意Minecraft 最终用户许可协议 (“EULA”)且不违反相关条例！**
+
+[EULA | **Minecraft Minecraft 最终用户许可协议** (“EULA”)](https://www.minecraft.net/zh-hans/eula){.readmore}
 
 回到SSH界面，在目录下使用命令`nano eula.txt`并输入`eula=true`，随后按下Ctrl+X快捷键，会提示`Save modified buffer? `，输入`Y`并按下回车，再次按下回车，完成对eula的确认。
 
-#### 5. 确定脚本内容
+## 5. 确定脚本内容
 
 在SSH界面，使用命令`nano start.sh`编辑启动脚本，在脚本中输入如下内容：
 
@@ -132,7 +134,7 @@ screen -dr myserver -X stuff "stop\n"
 
 根据自身情况更改后保存并退出。
 
-#### 6. 开服！
+## 6. 开服！
 
 执行命令`bash start.sh`开服
 
@@ -147,7 +149,7 @@ screen -dr myserver -X stuff "stop\n"
 （输入）screen -r 12345.myserver
 （进入后台）
 ```
-#### <u>7. (可选) 配置开机自启</u>
+## <u>7. (可选) 配置开机自启</u>
 
 首先你需要确定你拥有管理员权限，随后输入
 ```shell
