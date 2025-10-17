@@ -37,7 +37,7 @@ MSL从v3.7.0.4版本起支持一键配置外置登录，请您更新到 ==最新
 
 <LinkCard title="MSL Skin" icon="cloud" href="/docs/msl/msl-skin/" description="MSL Skin是由MSLTeam提供的公共皮肤站+外置登录验证服务。<br>您也可以让您的服务器接入本服务。" />
 
-若您使用Littleskin的服务，可以直接点击 ==设置为Littleskin == 按钮即可。
+若您使用Littleskin的服务，可以直接点击 ==设置为Littleskin== 按钮即可。
 
 然后记得点击 ==保存== 哦！
 
