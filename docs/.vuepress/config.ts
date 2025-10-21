@@ -12,6 +12,8 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
+import baiduAnalytics from './baidu-analytics'
 
 export default defineUserConfig({
   base: '/',
@@ -163,6 +165,7 @@ export default defineUserConfig({
     //   },
     //   include: true,      // 在 Markdown 文件中导入其他 markdown 文件内容
       imageSize: 'all', // 启用 自动填充 图片宽高属性，避免页面抖动
+
     },
 
     /**
@@ -199,4 +202,8 @@ export default defineUserConfig({
      */
     // encrypt: {},
   }),
+  
+  plugins:[
+    baiduAnalytics
+  ],
 })
