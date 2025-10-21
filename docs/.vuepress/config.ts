@@ -88,7 +88,7 @@ export default defineUserConfig({
       provider: 'algolia',
       appId: 'HMWFR6R913',
       apiKey: "76ae1566669584cc69d559000195a5fc",
-      indexName:"MSL Docs",
+      indices: ["MSL Docs"]
     },
 
     /**
