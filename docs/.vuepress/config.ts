@@ -12,7 +12,6 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 import baiduAnalytics from './baidu-analytics'
 
 export default defineUserConfig({
