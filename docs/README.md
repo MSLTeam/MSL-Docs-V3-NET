@@ -13,16 +13,19 @@ config:
       actions:
         -
           theme: brand
-          text: 立即下载 ⏬
+          text: 立即下载
           link: https://api.mslmc.cn/v3/download/update?direct=true
+          icon: download
         -
           theme: alt
-          text: 阅读文档 📖
+          text: 阅读文档
           link: /docs/mc-server/start/
+          icon: book
         -
           theme: alt
-          text: MSL用户中心/MSLFrp 🚀
+          text: MSL用户中心/MSLFrp
           link: https://user.mslmc.net
+          icon: user
   -
     type: features
     features:
