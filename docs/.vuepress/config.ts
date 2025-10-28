@@ -13,6 +13,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 import baiduAnalytics from './baidu-analytics'
+import clarityAnalytics from './clarity-analytics'
 
 export default defineUserConfig({
   base: '/',
@@ -203,6 +204,7 @@ export default defineUserConfig({
   }),
   
   plugins:[
-    baiduAnalytics
+    baiduAnalytics,
+    clarityAnalytics
   ],
 })
