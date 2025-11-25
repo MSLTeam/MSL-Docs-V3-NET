@@ -16,11 +16,21 @@ permalink: /docs/msl/oauth2/
 
 [MSL OAuth App管理](https://user.mslmc.net/user/oauth){.readmore}
 
-![image-20250518191948522](./assets/image-20250518191948522.png)
+![image-20251111163735501](./assets/image-20251111163735501.png)
 
 填写应用的 ==名字==，==图标==（推荐正方形，需要是可以外部访问的url地址），以及您的App的 ==回调地址== 。
 
-![image-20250518192149472](./assets/image-20250518192149472.png)
+注意：应用权限请保持默认的选择 ==用户信息== 。
+
+::: tip 关于应用权限
+
+如果你只是需要调用MSL用户中心进行登录，那么选择 ==用户信息== 是完全足够的。
+
+==所有权限== 是提供MSL账号的完全访问权限，仅适用于对接我们的其他服务（如MSLFrp），若您有这方面的需求，可以在Q群或者邮件联系我们商讨后为您开通相关权限。[support@mslmc.cn](mailto:support@mslmc.cn)
+
+:::
+
+![image-20251111164801605](./assets/image-20251111164801605.png)
 
 点击确定后，会返回您的App ==客户端ID== 以及 ==密钥== 信息。
 ::: important 注意
@@ -28,9 +38,9 @@ permalink: /docs/msl/oauth2/
 后续若忘记密钥就只能重置了。
 :::
 
-![image-20250518192239600](./assets/image-20250518192239600.png)
+![image-20251111164954920](./assets/image-20251111164954920.png)
 
-![image-20250518193907252](./assets/image-20250518193907252.png)
+![image-20251111165023639](./assets/image-20251111165023639.png)
 
 ::: info 审核
 添加App后会进入待审核状态，请 ==联系管理员审核== 。
@@ -136,8 +146,6 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
    ::: field name="client_secret" type="String" required default="FAOFoGDPtTK8Yudlerv..."
    您在第一步申请的客户端密钥
 
-   <Badge type="warning" text="非必须，但强烈建议。"  />
-
    :::
 
    ::::
@@ -145,7 +153,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
    返回示例:
 
    ```json
-   {
+{
      "code": 200,
      "msg": "授权成功",
      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg",
@@ -154,12 +162,20 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
      "scope": "user_info"
    }
    ```
-
+   
    获取到 ==access_token== 即可
 
    [完整API文档：**获取Access Token - MSL-User-System**](https://apidoc-user.mslmc.cn/297247077e0){.readmore}
 
 3. ### 获取用户信息
+
+   ::: warning 接口适用提醒
+
+   本api接口仅适用于权限类型为 ==用户信息=={.warning} 的应用。
+
+   若您使用的应用类型为所有权限，请参照我们提供的API文档获取用户信息。
+
+   :::
 
    <Badge type="tip" text="GET"  />
 
