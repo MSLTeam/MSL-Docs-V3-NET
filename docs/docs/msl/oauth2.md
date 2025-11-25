@@ -150,10 +150,12 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
 
    ::::
 
+   
+
    返回示例:
 
    ```json
-{
+   {
      "code": 200,
      "msg": "授权成功",
      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc0NzU1NzY3MiwiZXhwIjoxNzQ3NTYxMjcyfQ.iyX0dIXxrUkr6Dg7HCZ7YNQb2G1u5EYpzh-6wKYJShg",
@@ -162,7 +164,7 @@ MSL统一身份验证基于OAuth2的授权码模式规范设计
      "scope": "user_info"
    }
    ```
-   
+
    获取到 ==access_token== 即可
 
    [完整API文档：**获取Access Token - MSL-User-System**](https://apidoc-user.mslmc.cn/297247077e0){.readmore}
