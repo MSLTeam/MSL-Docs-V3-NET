@@ -36,7 +36,7 @@ export default defineUserConfig({
     /* 文档仓库配置，用于 editLink */
     docsRepo: 'MSLTeam/MSL-Docs-V3',
     docsDir: 'docs',
-    docsBranch: 'master',
+    docsBranch: 'dev',
 
     /* 页内信息 */
     editLink: true,
