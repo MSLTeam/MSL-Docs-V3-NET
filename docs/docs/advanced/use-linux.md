@@ -7,18 +7,22 @@ permalink: /docs/advanced/use-linux/
 
 <CardGrid>
 
-<LinkCard title="MSLX 尝鲜" icon="download" href="https://files.mslmc.cn/MSLX-Dev/Dev" description="支持跨平台的MSL正在火热开发🔥~" />
+<LinkCard title="MSLX 尝鲜" icon="download" href="/article/mslx/beta/" description="支持跨平台的MSL正在火热开发🔥~" />
 
 <LinkCard title="MSLX 文档" icon="book" href="https://mslx.mslmc.cn/" description="MSLX延续MSL的设计风格，基于.NET开发，跨平台支持！开服，运行Frp轻轻松松~" />
 
 </CardGrid>
 
 ::: important
-由于MSL暂时不支持Linux，所以本教程适合有一些基础的用户使用  
-==MSLX=={.important}在路上了~
+MSLX 已经在测试啦！快速开服，开箱即用！
+
+![MSLX-Custom](./assets/image-20251218192058397-9-vxqtrp.png)
+
 :::
 
 很多小伙伴都在云服务商购买了`云服务器`用来开服，但是有的时候只能安装Linux系统，这时候无法使用MSL，我们应该怎么开服呢？  
+
+!!使用MSLX!!
 
 !!(重装成Windows Server即可！)!!
 
