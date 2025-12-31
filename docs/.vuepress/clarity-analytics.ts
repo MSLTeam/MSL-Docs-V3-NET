@@ -1,5 +1,5 @@
 import { clarityAnalyticsPlugin } from '@vuepress/plugin-clarity-analytics'
 
 export default clarityAnalyticsPlugin ({
-    id: 'tx5ywui77e'
+    id: 'tx9xe7xk7i'
 })
