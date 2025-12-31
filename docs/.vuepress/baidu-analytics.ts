@@ -1,5 +1,5 @@
 import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 
 export default baiduAnalyticsPlugin ({
-    id: '55115f03a7e2382aa9591a607de03dde'
+    id: 'f731b863cf56cc57757ee1bb514e47db'
 })
