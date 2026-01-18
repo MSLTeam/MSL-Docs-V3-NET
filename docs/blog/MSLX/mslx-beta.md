@@ -2,6 +2,8 @@
 title: MSLX Alpha (早期开发版本) 测试尝鲜！
 createTime: 2025/12/11 23:42:16
 permalink: /article/mslx/beta/
+tags:
+  - MSLX
 ---
 
 ![image-20251209135212933](./assets/image-20251209135212933.png)
@@ -10,7 +12,7 @@ permalink: /article/mslx/beta/
 
 MSLX已于2026-01-17 发布正式版本，可以直接前往下载体验啦！
 
-[下载 MSLX](/docs/install/start/){.readmore}
+[下载 MSLX](https://mslx.mslmc.cn/docs/install/start/){.readmore}
 
 ::: warning 以下内容已经过时
 
