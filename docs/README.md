@@ -52,7 +52,7 @@ config:
       -
         title: 内网穿透
         icon: s:ethernet
-        details: 开服器内置免费的内网映射，足够让您和您的小伙伴畅快联机
+        details: 开服器内置半公益的内网映射，让您和您的小伙伴畅快联机！
         link: /docs/proxy/frp/
       -
         title: 点对点联机
