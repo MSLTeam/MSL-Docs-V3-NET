@@ -44,7 +44,7 @@ const blog = defineCollection({
   //   pagination: 15, // 每页显示文章数量
 })
 
-const demoDoc = defineCollection({
+const doc = defineCollection({
   // doc 类型，该类型带有侧边栏
   type: 'doc',
   // 文档集合所在目录，相对于 `docs`
@@ -74,5 +74,5 @@ const demoDoc = defineCollection({
  */
 export default defineCollection([
   blog,
-  demoDoc,
+  doc,
 ])
