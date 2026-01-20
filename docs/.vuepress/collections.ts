@@ -72,7 +72,7 @@ const doc = defineCollection({
  * (blog 为博客示例，如果不需要博客功能，请删除)
  * (demoDoc 为参考示例，如果不需要它，请删除)
  */
-export default defineCollection([
+export default defineCollections([
   blog,
   doc,
 ])
