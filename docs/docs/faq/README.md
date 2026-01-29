@@ -169,6 +169,8 @@ MSL是一款 ==开源软件== ，代码 ==100%公开==，请您放心使用。
 
 <LinkCard title="万用皮肤补丁" href="https://www.mcmod.cn/class/883.html" icon="shirt" description="使用万用皮肤补丁模组恢复皮肤显示。<br>此模组仅允许客户端安装，且仅对装了本模组的玩家互相可见。" />
 
+<LinkCard title="SkinRestorer插件" href="https://modrinth.com/plugin/skinsrestorer" icon="shirt" description="使用SkinsRestorer，可以为离线模式的服务器和网络恢复皮肤，玩家只需输入一个命令或者使用正版账号进入服务器即可更改皮肤。" />
+
 ## 单人存档（地图）如何迁移到服务器
 
 ::: tip 提醒

@@ -44,7 +44,7 @@ const blog = defineCollection({
   //   pagination: 15, // 每页显示文章数量
 })
 
-const demoDoc = defineCollection({
+const doc = defineCollection({
   // doc 类型，该类型带有侧边栏
   type: 'doc',
   // 文档集合所在目录，相对于 `docs`
@@ -59,7 +59,7 @@ const demoDoc = defineCollection({
   sidebar: [
     { text: '快速开始', prefix: 'mc-server', collapsed: false,icon:'star', items: ['start', 'launch-bds', 'choose-server-tips','package'] },
     { text: '服务器设置', prefix: 'config', collapsed: false,icon:'gear', items: ['server-config', 'msl'] },
-    { text: '映射/联机', prefix: 'proxy', collapsed: false,icon:'rocket', items: ['frp', 'p2p','frp-real-ip'] },
+    { text: '映射/联机', prefix: 'proxy', collapsed: false,icon:'rocket', items: ['frp', 'p2p','frp-real-ip','server-no-port'] },
     { text: '高级配置', prefix: 'advanced', collapsed: false,icon:'gears', items: ['neoforge-forge', 'yggdrasil', 'use-linux'] },
     { text: 'MSL资源', prefix: 'msl', collapsed: false,icon:'bookmark', items: ['msl-skin', 'oauth2', 'msl-mirrors'] },
     { text: '错误排查', prefix: 'faq', collapsed: false,icon:'bug-slash', items: ['', 'server-crash'] },
@@ -72,7 +72,7 @@ const demoDoc = defineCollection({
  * (blog 为博客示例，如果不需要博客功能，请删除)
  * (demoDoc 为参考示例，如果不需要它，请删除)
  */
-export default defineCollection([
+export default defineCollections([
   blog,
-  demoDoc,
+  doc,
 ])
