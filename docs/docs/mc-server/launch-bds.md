@@ -73,7 +73,7 @@ permalink: /docs/mc-server/launch-bds/
 
    :::
 
-   若服务器和游戏在同一台电脑上，IP地址输入`127.0.0.1`。否则您需要使用公网IP/内网传统以允许他人进入您的服务器。
+   若服务器和游戏在同一台电脑上，IP地址输入`127.0.0.1`。否则您需要使用公网IP/内网穿透以允许他人进入您的服务器。
 
    <LinkCard title="配置内网穿透" icon="book" href="/docs/proxy/frp/" description="如果您没有公网IP，那么点这查看如何配置内网穿透吧！<br>让其他人也能访问您的服务器！" />
 
