@@ -4,8 +4,8 @@ externalLinkIcon: false
 config:
   -
     type: hero
-    full: true
     background: tint-plate
+    full: true
     hero:
       name: MSL开服器
       tagline: Minecraft Server Launcher
@@ -26,8 +26,27 @@ config:
           text: MSL用户中心/MSLFrp
           link: https://user.mslmc.net
           icon: user
+  - 
+    type: custom-authors
+    authors:
+      - name: Weheal
+        role: MSL开发者 / 创始人
+        motto: 海内存知己，天涯若比邻 🌊
+        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=2035582067&spec=640&img_type=jpg
+      - name: xiaoyu
+        role: MSL开发者
+        motto: 饮茶先啦~ 🍵
+        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg
+      - name: GuHanDuRen
+        role: 文档贡献者
+        motto: 爱吃肉的古茗 🍔
+        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=2778318425&spec=640&img_type=jpg
+      - name: 一只万叶
+        role: 文档贡献者
+        motto: 哈基米~南北绿豆~叮咚鸡~ 🐱
+        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1722157266&spec=640&img_type=jpg
   -
-    type: features
+    type: modern-features
     features:
       -
         title: 开源
@@ -59,25 +78,8 @@ config:
         icon: s:network-wired
         details: 如果您既想联机又不想开服务器，不妨试一下此项新功能，无需服务器，通过P2P的方式进行局域网联机
         link: /docs/proxy/p2p/
-  -
-    type: profile
-    name: Weheal
-    description: <b>🌟MSL开发者/创始人</b><br>海内存知己，天涯若比邻 🌊
-    avatar: https://q.qlogo.cn/headimg_dl?dst_uin=2035582067&spec=640&img_type=jpg
-  -
-    type: profile
-    name: xiaoyu
-    description: <b>🌟MSL开发者/后端开发</b><br>饮茶先啦~ 🍵
-    avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg
-  -
-    type: profile
-    name: GuHanDuRen
-    description: <b>🌟文档贡献者</b><br>爱吃肉的古茗 🍔
-    avatar: https://q.qlogo.cn/headimg_dl?dst_uin=2778318425&spec=640&img_type=jpg
-  -
-    type: profile
-    name: 一只万叶
-    description: <b>🌟文档贡献者</b><br>飘渺风雨中，睹物思故乡 🍁<br>哈基米~南北绿豆~叮咚鸡~ 🐱
-    avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1722157266&spec=640&img_type=jpg
+  - 
+    type: github-stars
+    repo: MSLTeam/MSL
 ---
 
