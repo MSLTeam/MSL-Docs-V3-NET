@@ -86,7 +86,11 @@ config:
       - name: 客气の小瑞
         role: 一个面包人腐竹捏
         avatar: /home/user_pic/user_客气の小瑞.jpg
-        content: 灰常滴好用！作为一个开服器，上手已经灰常简单了，帮助一些小白腐竹了解也肥肠不戳，同时也很合适突然想和盆友临时丸一个新整合包或模组时开设一个临时服务器，
+        content: 灰常滴好用！作为一个开服器，上手已经灰常简单了，帮助一些小白腐竹了解也肥肠不戳，同时也很合适突然想和盆友临时丸一个新整合包或模组时开设一个临时服务器，内网穿透也还算稳定。总之非常好用捏o(￣▽￣)o
+      - name: 子云
+        role: 服主
+        avatar: /home/user_pic/user_子云.jpg
+        content: 真的很方便，新手第一次开服也不会很麻烦，墙裂推荐！
   - 
     type: github-stars
     repo: MSLTeam/MSL
