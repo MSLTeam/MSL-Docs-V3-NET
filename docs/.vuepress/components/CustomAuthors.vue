@@ -54,6 +54,7 @@ defineProps<ThemeHomeConfigBase & {
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .author-card {
