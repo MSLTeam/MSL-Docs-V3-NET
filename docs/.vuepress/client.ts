@@ -8,6 +8,7 @@ import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import CustomAuthors from './components/CustomAuthors.vue'
 import GithubStars from './components/GithubStars.vue'
 import ModernFeatures from './components/ModernFeatures.vue'
+import Testimonials from './components/Testimonials.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
@@ -24,6 +25,7 @@ export default defineClientConfig({
     app.component('custom-authors', CustomAuthors)
     app.component('github-stars', GithubStars)
     app.component('modern-features', ModernFeatures)
+    app.component('testimonials', Testimonials)
     // app.component('NpmBadge', NpmBadge)
     // app.component('NpmBadgeGroup', NpmBadgeGroup)
     // app.component('Swiper', Swiper) // you should install `swiper`
