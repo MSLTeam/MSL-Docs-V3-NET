@@ -87,6 +87,10 @@ config:
         role: 一个面包人腐竹捏
         avatar: /home/user_pic/user_客气の小瑞.jpg
         content: 灰常滴好用！作为一个开服器，上手已经灰常简单了，帮助一些小白腐竹了解也肥肠不戳，同时也很合适突然想和盆友临时丸一个新整合包或模组时开设一个临时服务器，内网穿透也还算稳定。总之非常好用捏o(￣▽￣)o
+      - name: 邱息
+        role: 一位还在上学和学习各种技术的腐竹
+        avatar: /home/user_pic/user_邱息.jpg
+        content: 我是邱息，活跃于MC开服圈。自2023年入坑，从MSL起步到MSLX深度参与测试与反馈，最终被收录鸣谢。<br><a href="/article/comments/qiuxi/">......查看原文</a>
       - name: 子云
         role: 服主
         avatar: /home/user_pic/user_子云.jpg
