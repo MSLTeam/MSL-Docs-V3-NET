@@ -96,6 +96,40 @@ config:
         avatar: /home/user_pic/user_子云.jpg
         content: 真的很方便，新手第一次开服也不会很麻烦，墙裂推荐！
   - 
+    type: modern-faq
+    title: 解答您的顾虑
+    description: 如果您对 MSL 有任何疑问，可以在这里寻找答案。
+    items:
+      - question: MSL 支持什么系统平台？
+        answer: MSL仅支持Windows平台，若希望在Linux/macOS，或者希望支持远程管理，可以使用 <a href="https://mslx.mslmc.cn" target="_blank">MSLX</a>。
+      - question: 支持哪些服务端核心？能装 Mod 和插件吗？
+        answer: 完美支持！内置的高速镜像源提供 Vanilla、Paper、Spigot 等主流插件核心秒速下载。同时原生兼容 Forge、Fabric、NeoForge 等 Mod 核心下载和一键安装，您可以自由定制您的服务器。
+      - question: 能开基岩版服务器吗？
+        answer: 从V3.7.4.8版本开始支持一键部署基岩版服务端，可以参考 →  <a href="/docs/mc-server/launch-bds/">官方文档</a>。
+      - question: 开服遇到了问题？
+        answer: 可查阅文档的错误排查部分 → <a href="/docs/faq/">常见问题</a>。<br>也可以加群一起交流 → <a href="/article/qq/">QQ群</a>
+  -
+    type: community-groups
+    title: 加入社区交流
+    description: 无论你是服主、玩家还是开发者，都能在这里找到志同道合的小伙伴。
+    groups:
+      - name: MSL / MSLX交流群①
+        tag: 推荐
+        number: 1145888872
+        desc: 最古老的MSL交流群
+        link: https://qm.qq.com/q/DtXqhiXcnm
+        full: true
+      - name: MSL / MSLX交流群②
+        tag: 推荐
+        number: 1023417539
+        desc: 新的群，空位较多~
+        link: https://qm.qq.com/q/VBjKJOiQEc
+      - name: MSL 软件交流群
+        tag: 闲聊吹水
+        number: 234477679
+        desc: 欢迎来吹水~
+        link: https://qm.qq.com/q/jl5HJXNgYg
+  - 
     type: github-stars
     repo: MSLTeam/MSL
 ---

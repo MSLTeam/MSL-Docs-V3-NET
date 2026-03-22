@@ -9,6 +9,8 @@ import CustomAuthors from './components/CustomAuthors.vue'
 import GithubStars from './components/GithubStars.vue'
 import ModernFeatures from './components/ModernFeatures.vue'
 import Testimonials from './components/Testimonials.vue'
+import ModernFAQ from './components/ModernFAQ.vue'
+import CommunityGroups from './components/CommunityGroups.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
@@ -26,6 +28,8 @@ export default defineClientConfig({
     app.component('github-stars', GithubStars)
     app.component('modern-features', ModernFeatures)
     app.component('testimonials', Testimonials)
+    app.component('modern-faq', ModernFAQ)
+    app.component('community-groups', CommunityGroups)
     // app.component('NpmBadge', NpmBadge)
     // app.component('NpmBadgeGroup', NpmBadgeGroup)
     // app.component('Swiper', Swiper) // you should install `swiper`
