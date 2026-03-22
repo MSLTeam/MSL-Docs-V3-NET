@@ -101,7 +101,7 @@ config:
     description: 如果您对 MSL 有任何疑问，可以在这里寻找答案。
     items:
       - question: MSL 支持什么系统平台？
-        answer: MSL仅支持Windows平台，若希望在Linux/macOS，或者希望支持远程管理，可以使用 <a href="https://mslx.mslmc.cn" target="_blank">MSLX</a>。
+        answer: MSL仅支持Windows平台，若希望在Linux/macOS上使用，或者希望支持远程管理，可以使用 <a href="https://mslx.mslmc.cn" target="_blank">MSLX</a>。
       - question: 支持哪些服务端核心？能装 Mod 和插件吗？
         answer: 完美支持！内置的高速镜像源提供 Vanilla、Paper、Spigot 等主流插件核心秒速下载。同时原生兼容 Forge、Fabric、NeoForge 等 Mod 核心下载和一键安装，您可以自由定制您的服务器。
       - question: 能开基岩版服务器吗？
