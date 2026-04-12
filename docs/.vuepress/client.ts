@@ -11,6 +11,7 @@ import ModernFeatures from './components/ModernFeatures.vue'
 import Testimonials from './components/Testimonials.vue'
 import ModernFAQ from './components/ModernFAQ.vue'
 import CommunityGroups from './components/CommunityGroups.vue'
+import ModernHero from './components/ModernHero.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
@@ -25,6 +26,7 @@ export default defineClientConfig({
     app.component('Changelog', Changelog)
     app.component('RepoCard', RepoCard)
     app.component('custom-authors', CustomAuthors)
+    app.component('modern-hero', ModernHero)
     app.component('github-stars', GithubStars)
     app.component('modern-features', ModernFeatures)
     app.component('testimonials', Testimonials)

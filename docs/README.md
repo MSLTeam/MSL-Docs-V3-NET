@@ -3,13 +3,33 @@ pageLayout: home
 externalLinkIcon: false
 config:
   -
-    type: hero
-    background: tint-plate
+    type: modern-hero
     full: true
+    backgroundImage:
+      light: /bg_light_new.jpg
+      dark: /bg_night.jpg
     hero:
-      name: MSL开服器
+      name: MSL 开服器
       tagline: Minecraft Server Launcher
-      text: 新一代服务器管理/联机工具
+      text: 新一代服务器管理 / 联机工具
+      logo: /logo.png
+      floatingTags:
+        - text: 极速镜像源
+          icon: bolt
+        - text: P2P 联机
+          icon: network-wired
+        - text: 100% 开源
+          icon: code
+        - text: 桌面端软件
+          icon: desktop
+        - text: 一键部署
+          icon: rocket
+        - text: 可视化管理
+          icon: coffee
+        - text: 多家穿透支持
+          icon: gauge-high
+        - text: 超多个性化支持
+          icon: paintbrush
       actions:
         -
           theme: brand
