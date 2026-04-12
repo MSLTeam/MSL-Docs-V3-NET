@@ -30,6 +30,8 @@ config:
           icon: gauge-high
         - text: 超多个性化支持
           icon: paintbrush
+        - text: 持续更新超5年
+          icon: clock
       actions:
         -
           theme: brand
