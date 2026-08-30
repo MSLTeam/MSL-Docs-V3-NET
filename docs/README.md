@@ -59,14 +59,6 @@ config:
         role: MSL开发者
         motto: 饮茶先啦~ 🍵
         avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1791123970&spec=640&img_type=jpg
-      - name: GuHanDuRen
-        role: 文档贡献者
-        motto: 爱吃肉的古茗 🍔
-        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=2778318425&spec=640&img_type=jpg
-      - name: 一只万叶
-        role: 文档贡献者
-        motto: 哈基米~南北绿豆~叮咚鸡~ 🐱
-        avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1722157266&spec=640&img_type=jpg
   -
     type: modern-features
     features:
