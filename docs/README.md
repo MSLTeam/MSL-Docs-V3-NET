@@ -50,6 +50,7 @@ config:
           icon: user
   - 
     type: custom-authors
+    title: "✨ MSLTeam"
     authors:
       - name: Weheal
         role: MSL开发者 / 创始人
